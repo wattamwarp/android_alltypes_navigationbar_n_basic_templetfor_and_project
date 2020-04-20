@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "686792034616",
+    "firebase_url": "https://gnvc-72cdf.firebaseio.com",
+    "project_id": "gnvc-72cdf",
+    "storage_bucket": "gnvc-72cdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686792034616:android:c34ccc46fa7eb8326619cd",
+        "android_client_info": {
+          "package_name": "com.gnvc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686792034616-6lrih6fld1jq23lufjbvh7jjsgakfb9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR9MezX0QRuK2B6UwRto-2m-ep3py_5Ck"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686792034616-6lrih6fld1jq23lufjbvh7jjsgakfb9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

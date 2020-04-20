@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/noAppTheme"
+    android:orientation="vertical"
+    tools:context=".login">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Emailid"
+        android:textColorHint="@color/colorPrimary"
+        android:outlineAmbientShadowColor="@color/colorPrimary"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="180dp"
+        app:boxStrokeColor="@color/colorPrimary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/colorPrimary"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="287dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="250dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="410dp" />
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="132dp"
+        android:layout_height="59dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="300dp"
+        android:text="login"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="508dp" />
+
+    <TextView
+        android:id="@+id/login_tv_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="New User? Register Here"
+        android:textSize="20dp" />
+
+</RelativeLayout>
