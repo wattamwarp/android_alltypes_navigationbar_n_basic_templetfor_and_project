@@ -1,15 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Account"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+        android:layout_gravity="center"
+        android:background="#008b8c"
+        android:gravity="clip_vertical"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/header_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/round_backgroud" />
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/profile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/header_cover_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-130dp"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person"
+            app:civ_border_color="#FFFFFFFF"
+            app:civ_border_width="3dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Thomas Schneider"
+            android:textColor="#fff"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/photographer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Photographer"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+    </LinearLayout>
+</LinearLayout>
