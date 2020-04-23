@@ -45,7 +45,7 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String e,p;
+                final String e,p;
                 e=username.getText().toString();
                 p=password.getText().toString();
 
@@ -63,6 +63,7 @@ public class login extends AppCompatActivity {
                                 // Writing data to SharedPreferences
                                 SharedPreferences.Editor editor = settings.edit();
                                 editor.putString("login", "true");
+                                editor.putString("emailid",e);
                                 editor.commit();
 
                                 startActivity(intent);

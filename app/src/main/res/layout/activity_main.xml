@@ -24,6 +24,7 @@
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
             android:layout_above="@id/bottom_navigation" />
 
 
@@ -49,8 +50,16 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/drawer_menu"
-        app:headerLayout="@layout/header"
         >
+
+        <Button
+            android:id="@+id/nav_btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:layout_marginTop="650dp"
+            android:background="@color/colorPrimary"></Button>
 
     </com.google.android.material.navigation.NavigationView>
 

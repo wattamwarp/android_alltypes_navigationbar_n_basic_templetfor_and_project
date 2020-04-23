@@ -91,6 +91,7 @@ public class signup_firebase extends AppCompatActivity {
                                 // Writing data to SharedPreferences
                                 SharedPreferences.Editor editor = settings.edit();
                                 editor.putString("login", "true");
+                                editor.putString("emailid",emailID);
                                 editor.commit();
 
                                 startActivity(new Intent(signup_firebase.this, MainActivity.class));
