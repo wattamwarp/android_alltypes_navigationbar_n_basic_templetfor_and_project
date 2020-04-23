@@ -7,4 +7,7 @@
     <color name="colorNavIcon">#dae9f6</color>
     <color name="white">#FFFFFF</color>
     <color name="colorNavText">#01294b</color>
+
+    <color name="gradient_start">#08C8F6</color>
+    <color name="gradient_end">#4D5DFB</color>
 </resources>

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,11 +23,14 @@ public class login extends AppCompatActivity {
     FirebaseAuth firebaseauth;
     TextView signup;
 
+    public static final String PREFS_NAME = "login_data";
+
     //Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
 
         firebaseauth=FirebaseAuth.getInstance();
 
@@ -52,7 +56,17 @@ public class login extends AppCompatActivity {
 
                             if (task.isSuccessful()){
                                 Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+
+                                //code for skipping login activity
+                                SharedPreferences settings = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+
+                                // Writing data to SharedPreferences
+                                SharedPreferences.Editor editor = settings.edit();
+                                editor.putString("login", "true");
+                                editor.commit();
+
                                 startActivity(intent);
+
                             }
                             else{
                                 Toast.makeText(getApplicationContext(),"enter corect appss",Toast.LENGTH_LONG).show();

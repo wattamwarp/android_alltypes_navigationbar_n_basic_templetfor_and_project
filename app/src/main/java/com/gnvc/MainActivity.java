@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     DrawerLayout drawerlayout;
     Toolbar toolbar;
     ActionBarDrawerToggle toogle;
-    NavigationView  navigation_view;
+    NavigationView navigation_view;
 
 
     @Override
@@ -39,19 +39,19 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         settoolbar();//creating toolbar icon
 
-        navigation_view=findViewById(R.id.navigation_menu);
+        navigation_view = findViewById(R.id.navigation_menu);
         navigation_view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment1 = null;
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
 
                     case R.id.drawaer_nav_home:
-                    fragment1=new fragment_home();
-                    break;
+                        fragment1 = new fragment_home();
+                        break;
 
-                    case  R.id.drawaer_nav_about:
-                        fragment1=new fragment_account();
+                    case R.id.drawaer_nav_about:
+                        fragment1 = new fragment_account();
                         break;
 
                 }
@@ -100,12 +100,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     }
 
-    public void settoolbar(){
-        drawerlayout=findViewById(R.id.drawer_layout);
-        toolbar=findViewById(R.id.toolbar);
+    public void settoolbar() {
+        drawerlayout = findViewById(R.id.drawer_layout);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        toogle=new ActionBarDrawerToggle(this,drawerlayout,toolbar,R.string.app_name,R.string.app_name);
+        toogle = new ActionBarDrawerToggle(this, drawerlayout, toolbar, R.string.app_name, R.string.app_name);
         drawerlayout.setDrawerListener(toogle);
         toogle.syncState();
 

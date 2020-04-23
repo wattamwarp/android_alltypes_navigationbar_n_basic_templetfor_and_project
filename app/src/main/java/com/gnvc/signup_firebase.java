@@ -2,6 +2,7 @@ package com.gnvc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,6 +34,9 @@ public class signup_firebase extends AppCompatActivity {
     Button btnSignUp;
     TextView signIn;
     FirebaseAuth firebaseAuth;
+
+    public static final String PREFS_NAME = "login_data";
+
     final String[] countno = new String[1];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +84,15 @@ public class signup_firebase extends AppCompatActivity {
                                 newpost.put("email",emailID);
                                 newpost.put("pass",paswd);
                                 db.setValue(newpost);
+
+                                //code for skipping login activity
+                                SharedPreferences settings = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+
+                                // Writing data to SharedPreferences
+                                SharedPreferences.Editor editor = settings.edit();
+                                editor.putString("login", "true");
+                                editor.commit();
+
                                 startActivity(new Intent(signup_firebase.this, MainActivity.class));
                             }
                         }
