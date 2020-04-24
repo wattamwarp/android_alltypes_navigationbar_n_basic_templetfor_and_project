@@ -1,8 +1,10 @@
 package com.gnvc;
 
 import android.app.FragmentTransaction;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -82,6 +84,30 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     case R.id.drawaer_nav_about:
                         fragment1 = new fragment_account();
                         break;
+
+                    case R.id.drawaer_nav_rate:
+                        {
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW,
+                                    Uri.parse("market://details?id=" + getPackageName())));
+                        } catch (ActivityNotFoundException e) {
+                            startActivity(new Intent(Intent.ACTION_VIEW,
+                                    Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName())));
+                        }
+
+                        break;
+                    }
+                    //code for share item listner
+                    case R.id.drawaer_nav_share:{
+                        Intent myIntent = new Intent(Intent.ACTION_SEND);
+                        myIntent.setType("text/plain");
+                        String shareBody = "https://youtu.be/-vGluJMNClc";
+                        String shareSub = "Your subject";
+                        myIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, shareSub);
+                        myIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                        startActivity(Intent.createChooser(myIntent, "Share using"));
+
+                    }
 
                 }
 

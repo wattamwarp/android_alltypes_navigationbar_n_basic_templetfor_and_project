@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="#008b8c"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
 
@@ -22,7 +22,6 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_below="@+id/header_cover_image"
-            android:layout_centerHorizontal="true"
             android:clickable="true"
             android:elevation="5dp"
             android:padding="20dp"
@@ -58,7 +57,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -67,11 +65,13 @@
             >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frag_acc_fname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Padmanabh"
                 android:padding="10dp"
                 android:textSize="18sp"
+                android:layout_marginTop="6dp"
                 android:textStyle="normal"
                 android:textColor="@color/black"
                 android:layout_marginRight="4dp"
@@ -79,6 +79,33 @@
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:hint="Last Name"
+            android:textColorHint="@color/gradient_end"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/frag_acc_lname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wattamwar"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:textStyle="normal"
+                android:textColor="@color/black"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
     </LinearLayout>
 
 </LinearLayout>
